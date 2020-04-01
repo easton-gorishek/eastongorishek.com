@@ -14,6 +14,8 @@ module.exports = {
     'gatsby-plugin-emotion',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-eslint',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-prefetch-google-fonts',
       options: {
@@ -34,6 +36,13 @@ module.exports = {
             family: 'Roboto',
           },
         ],
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: 'src/images',
       },
     },
   ],
