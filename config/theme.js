@@ -1,18 +1,27 @@
+import facepaint from 'facepaint';
 const brand = {
-  primary: '#c5c6c7',
-  secondary: '#66FCF1',
+  primary: '#0c0032',
+  secondary: '#3500d3',
 };
 
 const colors = {
-  bg_color_light: brand.primary,
-  bg_color_dark: '#0b0c10',
-  link_color: brand.primary,
-  link_color_hover: '#45a29e',
+  copy: '#fffcec',
+  white: '#fffcec',
+  smoke_black: '#100c08',
+  bg_color_light: brand.secondary,
+  bg_color_dark: brand.primary,
+  link_color: '#fffcec',
+  link_color_hover: '#b9e1cc',
 };
+
+const breakpoints = [375, 480, 576, 768, 1024];
+const mq = facepaint(breakpoints.map(bp => `@media (min-width: ${bp}px)`));
 
 const theme = {
   brand,
   colors,
+  mq,
 };
 
 export default theme;
+
