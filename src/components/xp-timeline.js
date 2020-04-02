@@ -8,25 +8,21 @@ import {
 import 'react-vertical-timeline-component/style.min.css';
 import theme from '../../config/theme';
 import xpImg from '../images/xp-image.svg';
-import xpContent from './xp.js';
+import xpList from './xp-list.js';
 
 const XpHeader = styled('section')(
   theme.mq({
-    margin: '0 auto 128px',
-    marginBottom: [64, 64, 128, 128, 128, 128],
-    paddingTop: [0, 64, 128, 128, 128, 128],
+    margin: '0 auto',
+    marginBottom: [64, 64, 128],
+    paddingTop: [0, 64, 128],
     width: '65em',
     maxWidth: '90vw',
-    minHeight: 500,
     display: 'flex',
     alignItems: 'flex-end',
-    '@media screen and (max-width: 820px) and (orientation: landscape)': {
+    '@media screen and (max-width: 1024px) and (max-height: 420px) and (orientation: landscape)': {
       paddingTop: 0,
-      marginBottom: 40,
-      minHeight: 350,
-    },
-    '@media screen and (max-width: 576px) and (orientation: landscape)': {
-      minHeight: 300,
+      alignItems: 'flex-start',
+      marginBottom: 64,
     },
   })
 );
@@ -36,10 +32,8 @@ const XpTimeline = () => {
     <div
       css={css`
         width: 100%;
+        padding-bottom: 128px;
         background: ${theme.brand.primary};
-        @media screen and (max-width: 820px) and (orientation: landscape) {
-          padding-top: 64px;
-        }
       `}
     >
       <XpHeader>
@@ -47,52 +41,28 @@ const XpTimeline = () => {
           css={theme.mq({
             width: '100%',
             display: 'flex',
-            flexDirection: [
-              'column',
-              'column',
-              'column',
-              'column',
-              'column',
-              'row',
-            ],
+            flexDirection: ['column', 'column', 'column', 'column', 'row'],
             alignItems: 'center',
-            justifyContent: [
-              'center',
-              'center',
-              'center',
-              'center',
-              'center',
-              'space-between',
-            ],
+            justifyContent: ['center', 'center', 'center',' center', 'space-around'],
             '& .xp-image': {
-              height: [250, 300, 400, 400, 400, 400],
-              marginBottom: [32, 32, 32, 32, 32, 0],
+              height: [250, 300, 300, 300, 275, 300],
+              marginBottom: [32, 32, 32, 32, 0],
             },
             '& .xp-header': {
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              fontSize: [44, 48, 70, 70, 70, 70],
+              fontSize: [40, 48, 56, 60, 60, 72],
             },
-            '@media screen and (max-width: 820px) and (orientation: landscape)': {
+            '@media only screen and (max-width: 1024px) and (max-height: 420px) and (orientation: landscape)': {
               flexDirection: 'row',
               justifyContent: 'space-around',
-              '& .xp-header': {
-                fontSize: 48,
-              },
-              '& .xp-image': {
-                height: 250,
-              },
-            },
-            '@media screen and (max-width: 576px) and (orientation: landscape)': {
-              flexDirection: 'row',
-              justifyContent: 'space-around',
-
-              '& .xp-header': {
-                fontSize: 40,
-              },
               '& .xp-image': {
                 height: 200,
+                marginBottom: 0,
+              },
+              '& .xp-header': {
+                fontSize: 48,
               },
             },
           })}
@@ -122,7 +92,7 @@ const XpTimeline = () => {
         })}
       >
         <VerticalTimeline>
-          {xpContent.map(xp => (
+          {xpList.map(xp => (
             <VerticalTimelineElement
               contentStyle={{
                 background: xp.background,

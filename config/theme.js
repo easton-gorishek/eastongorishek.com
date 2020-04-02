@@ -8,6 +8,7 @@ const colors = {
   copy: '#fffcec',
   white: '#fffcec',
   smoke_black: '#100c08',
+  electric_purple: '#6f00ff',
   bg_color_light: brand.secondary,
   bg_color_dark: brand.primary,
   link_color: '#fffcec',

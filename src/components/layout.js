@@ -30,6 +30,11 @@ const globalStyles = css`
     color: ${theme.colors.link_color};
   }
 
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
   h1,
   h2,
   h3,
