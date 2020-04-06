@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import Link from './link';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import theme from '../../config/theme';
@@ -9,22 +9,24 @@ const NavLink = styled(Link)({
   '& + &': { marginLeft: 50 },
   '@media (max-width: 480px)': {
     '& + &': {
-      marginLeft: 25
-    }
+      marginLeft: 25,
+    },
   },
   '&:hover': {
-    color: theme.colors.link_color_hover,
+    color: theme.colors.electric_purple,
   },
 });
 
-function Header({ bgColor = '#100c08' }) {
+function Header({ isMDX }) {
   return (
     <header
       css={css`
         display: flex;
         width: 100%;
         height: 100px;
-        background: ${bgColor};
+        background: ${theme.colors.smoke_black};
+        ${isMDX &&
+          `background: linear-gradient(to left, ${theme.brand.primary}, ${theme.brand.primary})`}
       `}
     >
       <nav
@@ -49,7 +51,7 @@ function Header({ bgColor = '#100c08' }) {
           `}
         >
           <NavLink to="/about/">about</NavLink>
-          <NavLink to="/about/">contact</NavLink>
+          <NavLink to="/contact/">contact</NavLink>
         </div>
       </nav>
     </header>

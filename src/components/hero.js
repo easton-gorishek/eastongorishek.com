@@ -1,26 +1,27 @@
 import React from 'react';
+import { darken } from 'polished';
 import styled from '@emotion/styled';
 import heroImg from '../images/hero-image.svg';
 import Link from '../components/link';
 import theme from '../../config/theme';
 
-const NavLink = styled(Link)(
+const HeroBackground = styled.div(
   theme.mq({
-    color: `${theme.colors.link_color}`,
-    fontSize: [18, 20, 24],
-    '&:hover': {
-      color: `${theme.colors.link_color_hover}`,
+    width: '100%',
+    minHeight: [500, 600, 600, 600, 850],
+    background: `linear-gradient(${theme.colors.smoke_black}, 35%, ${theme.brand.primary})`,
+    '@media screen and (max-width: 1024px) and (max-height: 420px) and (orientation: landscape)': {
+      minHeight: 500,
     },
   })
 );
 
-const HeroBackground = styled.div(
+const NavLink = styled(Link)(
   theme.mq({
-    width: '100%',
-    minHeight: [500, 500, 500, 500, 750],
-    background: `linear-gradient(${theme.colors.smoke_black}, 35%, ${theme.brand.primary})`,
-    '@media screen and (max-width: 1024px) and (max-height: 420px) and (orientation: landscape)': {
-      minHeight: 450,
+    color: theme.colors.electric_purple,
+    fontSize: [18, 20, 24],
+    '&:hover': {
+      color: darken(0.05, theme.colors.electric_purple),
     },
   })
 );
@@ -81,7 +82,7 @@ const Hero = () => {
           <p className="hero-copy">
             I&apos;m Easton Gorishek. I&apos;m a software engineer based in
             Portland, OR. I love to explore and bring ideas to life through code
-            while sipping on a hot cup of joe.
+            while sipping on a hot cup of coffee.
           </p>
           <NavLink className="hero-link" to="/about/">
             Read more &rarr;

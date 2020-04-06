@@ -3,7 +3,10 @@ import { Link as GatsbyLink } from 'gatsby';
 
 const Link = ({ children, to, ...other }) => {
   return (
-    <GatsbyLink to={to} {...other}>
+    <GatsbyLink
+      to={to}
+      {...other}
+    >
       {children}
     </GatsbyLink>
   );

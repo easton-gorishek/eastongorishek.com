@@ -1,19 +1,18 @@
 import React from 'react';
-import { css } from '@emotion/core';
 import theme from '../../config/theme';
 import knowledgeImg from '../images/knowledge.svg';
 
-const SkillsetBlock = ({ header, skills }) => {
+const SkillsetBlock = ({ header, skills, children }) => {
   return (
     <div
       css={theme.mq({
-        marginBottom: [64, 64, 64, 64, 0],
         '.skillset-block-header': {
-          fontSize: [32, 40],
+          fontSize: [32, 32],
         },
         '.skillset-item': {
           fontSize: [18, 20, 24],
         },
+        marginBottom: [24, 24, 0],
         '@media only screen and (max-width: 1024px) and (max-height: 420px) and (orientation: landscape)': {
           marginBottom: 0,
           '.skillset-block-header': {
@@ -33,6 +32,7 @@ const SkillsetBlock = ({ header, skills }) => {
           </li>
         ))}
       </ul>
+      {children}
     </div>
   );
 };
@@ -41,19 +41,23 @@ const Skillset = () => {
   return (
     <div
       css={theme.mq({
-        paddingTop: 64,
-        paddingBottom: 256,
+        paddingBottom: [150, 150, 200],
         width: '100%',
         minHeight: 750,
         background: theme.brand.primary,
+        '@media only screen and (max-width: 1024px) and (max-height: 420px) and (orientation: landscape)': {
+          paddingBottom: 150,
+        },
       })}
     >
       <div
-        css={css`
-          width: 65em;
-          max-width: 90vw;
-          margin: 0 auto;
-        `}
+        css={theme.mq({
+          display: 'flex',
+          flexDirection: 'column',
+          width: '65em',
+          maxWidth: '90vw',
+          margin: '0 auto',
+        })}
       >
         <div
           css={theme.mq({
@@ -67,6 +71,7 @@ const Skillset = () => {
               'center',
               'space-around',
             ],
+            marginBottom: [64, 64, 128],
             '.skillset-header': {
               display: 'flex',
               flexDirection: 'column',
@@ -76,6 +81,10 @@ const Skillset = () => {
             },
             '.skillset-image': {
               height: [250, 300],
+            },
+            '.exploring': {
+              textAlign: 'center',
+              fontSize: 16,
             },
             '@media only screen and (max-width: 1024px) and (max-height: 420px) and (orientation: landscape)': {
               flexDirection: 'row',
@@ -88,6 +97,9 @@ const Skillset = () => {
                 fontSize: 48,
               },
             },
+            '@media screen and (max-width: 1024px) and (max-height: 420px) and (orientation: landscape)': {
+              marginBottom: 64,
+            },
           })}
         >
           <h1 className="skillset-header">
@@ -95,7 +107,10 @@ const Skillset = () => {
             <span>&</span>
             <span>Interests</span>
           </h1>
-          <img className="skillset-image" src={knowledgeImg} height={300} />
+          <div>
+            <img className="skillset-image" src={knowledgeImg} height={300} />
+            <p className="exploring">* currently exploring</p>
+          </div>
         </div>
         <div
           css={theme.mq({
@@ -106,21 +121,17 @@ const Skillset = () => {
               'center',
               'center',
               'center',
-              'space-between',
+              'space-around',
             ],
-            marginTop: 128,
-            marginBottom: 16,
             '@media only screen and (max-width: 1024px) and (max-height: 420px) and (orientation: landscape)': {
               flexDirection: 'row',
-              justifyContent: 'space-between',
-              marginTop: 64,
+              justifyContent: 'space-around',
             },
           })}
         >
           <SkillsetBlock
             header="Core"
-            skills={['JavaScript', 'Ruby', 'Node.js', 'HTML5', 'CSS3']}
-            position="flex-start"
+            skills={['JavaScript', 'Ruby', 'Node.js', 'HTML5', 'CSS3', 'MongoDB']}
           />
           <SkillsetBlock
             header="Libraries"
@@ -132,15 +143,12 @@ const Skillset = () => {
               'Keras *',
               'D3.js *',
             ]}
-            position="flex-end"
           />
           <SkillsetBlock
             header="Services"
             skills={['Heroku', 'Netlify', 'Docker']}
-            position="flex-start"
           />
         </div>
-        <p>* currently exploring</p>
       </div>
     </div>
   );

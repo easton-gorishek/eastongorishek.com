@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -14,14 +13,11 @@ const XpHeader = styled('section')(
   theme.mq({
     margin: '0 auto',
     marginBottom: [64, 64, 128],
-    paddingTop: [0, 64, 128],
     width: '65em',
     maxWidth: '90vw',
     display: 'flex',
     alignItems: 'flex-end',
     '@media screen and (max-width: 1024px) and (max-height: 420px) and (orientation: landscape)': {
-      paddingTop: 0,
-      alignItems: 'flex-start',
       marginBottom: 64,
     },
   })
@@ -30,11 +26,14 @@ const XpHeader = styled('section')(
 const XpTimeline = () => {
   return (
     <div
-      css={css`
-        width: 100%;
-        padding-bottom: 128px;
-        background: ${theme.brand.primary};
-      `}
+      css={theme.mq({
+        width: '100%',
+        paddingBottom: [150, 150, 200],
+        background: theme.brand.primary,
+        '@media only screen and (max-width: 1024px) and (max-height: 420px) and (orientation: landscape)': {
+          paddingBottom: 150,
+        },
+      })}
     >
       <XpHeader>
         <div
@@ -43,7 +42,13 @@ const XpTimeline = () => {
             display: 'flex',
             flexDirection: ['column', 'column', 'column', 'column', 'row'],
             alignItems: 'center',
-            justifyContent: ['center', 'center', 'center',' center', 'space-around'],
+            justifyContent: [
+              'center',
+              'center',
+              'center',
+              ' center',
+              'space-around',
+            ],
             '& .xp-image': {
               height: [250, 300, 300, 300, 275, 300],
               marginBottom: [32, 32, 32, 32, 0],

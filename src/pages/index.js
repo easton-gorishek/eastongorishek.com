@@ -3,6 +3,7 @@ import Layout from '../components/layout';
 import Hero from '../components/hero';
 import XpTimeline from '../components/xp-timeline';
 import Skillset from '../components/skillset';
+import ThankYou from '../components/thank-you';
 
 export default () => {
   return (
@@ -11,6 +12,7 @@ export default () => {
         <Hero />
         <XpTimeline />
         <Skillset />
+        <ThankYou />
       </Layout>
     </>
   );

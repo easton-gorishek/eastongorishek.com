@@ -4,6 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+// eslint-disable-next-line no-undef
 module.exports = {
   /* Your site config here */
   siteMetadata: {
@@ -16,6 +17,16 @@ module.exports = {
     'gatsby-plugin-eslint',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        defaultLayouts: {
+          // eslint-disable-next-line no-undef
+          default: require.resolve('./src/templates/mdx-page.js'),
+        },
+        extensions: ['.mdx', '.md', '.markdown'],
+      },
+    },
     {
       resolve: 'gatsby-plugin-prefetch-google-fonts',
       options: {

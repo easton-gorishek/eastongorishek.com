@@ -1,10 +1,12 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import { MDXProvider } from '@mdx-js/react';
 import { Global, css } from '@emotion/core';
 import { ThemeProvider } from 'emotion-theming';
 import useSiteMetadata from '../hooks/use-sitemetadata';
 import Header from './header';
 import Footer from './footer';
+import mdxComponents from './mdx';
 import theme from '../../config/theme';
 
 const globalStyles = css`
@@ -31,16 +33,11 @@ const globalStyles = css`
   }
 
   ul {
-    list-style: none;
-    padding: 0;
+    list-style: circle;
   }
 
   h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h2 {
     font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
     font-weight: 600;
@@ -49,7 +46,7 @@ const globalStyles = css`
   }
 `;
 
-const Layout = ({ children, bgColor }) => {
+const Layout = ({ children, bgColor = theme.colors.white, isMDX }) => {
   const { title, description } = useSiteMetadata();
   return (
     <ThemeProvider theme={theme}>
@@ -66,12 +63,12 @@ const Layout = ({ children, bgColor }) => {
           width: 100%;
           min-height: 100vh;
           overflow: hidden;
-          ${bgColor && `background: ${bgColor}`};
+          background: ${bgColor};
         `}
       >
         <div css={{ flex: '1 0 auto', zIndex: 0 }}>
-          <Header />
-          <main>{children}</main>
+          <Header isMDX={isMDX} />
+          <MDXProvider components={mdxComponents}>{children}</MDXProvider>
         </div>
         <Footer />
       </div>
