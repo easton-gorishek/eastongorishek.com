@@ -9,6 +9,7 @@ const MDXPage = ({ children }) => {
       <div
         css={css`
           width: 850px;
+          padding-bottom: 80px;
           max-width: 90vw;
           margin: 0 auto;
         `}

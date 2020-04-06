@@ -1,7 +1,6 @@
 import React from 'react';
 // import { css } from '@emotion/core';
 import { navigate } from 'gatsby-link';
-import { lighten } from 'polished';
 import theme from '../../config/theme';
 
 function encode(data) {
@@ -39,25 +38,42 @@ const Contact = () => {
       css={theme.mq({
         width: '100%',
         p: {
-          fontSize: 20,
           color: theme.colors.smoke_black,
           marginBottom: 24,
         },
-
+        label: {
+          fontSize: 18,
+        },
         input: {
-          minWidth: ['100%', '100%', '100%', '100%', '100%', '75  %'],
+          fontSize: 18,
+          minWidth: ['100%', '100%', '100%', '100%', '100%', '75%'],
           height: 40,
+          padding: 8,
           borderRadius: 4,
           border: `1px solid ${theme.colors.smoke_black}`,
         },
-
         textarea: {
-          fontSize: 20,
-          minWidth: ['100%', '100%', '100%', '100%', '100%', '75  %'],
-          maxWidth: ['100%', '100%', '100%', '100%', '100%', '75  %'],
+          fontSize: 18,
+          minWidth: ['100%', '100%', '100%', '100%', '100%', '75%'],
+          maxWidth: ['100%', '100%', '100%', '100%', '100%', '75%'],
+          minHeight: 225,
           padding: 8,
           borderRadius: 4,
-          border: `1px solid ${lighten(0.25, theme.colors.smoke_black)}`,
+          border: `1px solid ${theme.colors.smoke_black}`,
+        },
+        button: {
+          fontSize: 24,
+          width: 100,
+          fontFamily: 'Roboto, sans-serif',
+          padding: 8,
+          color: theme.colors.copy,
+          background: theme.colors.electric_purple,
+          border: `1px solid ${theme.colors.electric_purple}`,
+          borderRadius: 4,
+          '&:hover': {
+            background: theme.colors.smoke_black,
+            border: `1px solid ${theme.colors.smoke_black}`,
+          },
         },
       })}
     >
@@ -89,6 +105,13 @@ const Contact = () => {
             Email
             <br />
             <input type="email" name="email" onChange={handleChange} />
+          </label>
+        </p>
+        <p>
+          <label>
+            Subject
+            <br />
+            <input type="text" name="subject" onChange={handleChange} />
           </label>
         </p>
         <p>

@@ -23,7 +23,7 @@ function Header({ isMDX }) {
       css={css`
         display: flex;
         width: 100%;
-        height: 100px;
+        height: 80px;
         background: ${theme.colors.smoke_black};
         ${isMDX &&
           `background: linear-gradient(to left, ${theme.brand.primary}, ${theme.brand.primary})`}
