@@ -21,7 +21,7 @@ const globalStyles = css`
 
   body {
     color: ${theme.colors.copy};
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Regular', sans-serif;
     letter-spacing: 1.5px;
     font-size: 16px;
     line-height: 1.5;
@@ -29,23 +29,28 @@ const globalStyles = css`
 
   a {
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;
+    font-family: 'Roboto Medium', sans-serif;
     letter-spacing: 1.1px;
     color: ${theme.colors.link_color};
+    text-transform: uppercase;
   }
 
   ul {
     list-style: circle;
   }
 
+  h1 {
+    font-family: 'Archivo Bold', sans-serif;
+  }
+
+  h2 {
+    font-family: 'Archivo SemiBold', sans-serif;
+  }
+
   h1,
   h2 {
-    font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
-    font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.1;
     text-transform: uppercase;
   }
 `;

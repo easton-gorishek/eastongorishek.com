@@ -12,7 +12,7 @@ const SkillsetBlock = ({ header, skills, children }) => {
         '.skillset-item': {
           fontSize: [18, 20, 24],
         },
-        marginBottom: [24, 24, 0],
+        marginBottom: [24, 24, 24, 24, 0],
         '@media only screen and (max-width: 1024px) and (max-height: 420px) and (orientation: landscape)': {
           marginBottom: 0,
           '.skillset-block-header': {

@@ -78,7 +78,7 @@ const Hero = () => {
         })}
       >
         <div className="hero-container">
-          <h2 className="hero-header">hello!</h2>
+          <h1 className="hero-header">Hello!</h1>
           <p className="hero-copy">
             I&apos;m Easton Gorishek. I&apos;m a software engineer based in
             Portland, OR. I love to explore and bring ideas to life through code

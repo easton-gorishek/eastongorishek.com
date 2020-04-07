@@ -1,6 +1,34 @@
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Roboto Regular';
   font-style: normal;
   font-weight: 400;
-  src: url('Roboto-Regular.ttf') format('ttf');
+  src: url('Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: url('Roboto-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: url('Roboto-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Archivo SemiBold';
+  font-style: normal;
+  font-weight: 600;
+  src: url('Archivo-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Archivo Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: url('Archivo-Bold.ttf') format('truetype');
 }
