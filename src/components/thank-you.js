@@ -47,6 +47,12 @@ const ThankYou = () => {
               fontSize: [18, 20, 24],
               fontStyle: 'italic',
             },
+            '.still-curious': {
+              marginBottom: 16
+            },
+            '.additional-pages li': {
+              marginBottom: 16,
+            },
             '.additional-container': {
               borderLeft: `4px solid ${theme.colors.electric_purple}`,
               paddingLeft: 16,
@@ -70,7 +76,7 @@ const ThankYou = () => {
               </li>
               <li>
                 <NavLink to="/contact/">Contact</NavLink> - Let&apos;s
-                connect...I&apos;d love to chat!
+                connect. I&apos;d love to chat!
               </li>
               <li>
                 <NavLink to="/resume/">Resume</NavLink> - View my resume

@@ -5,9 +5,8 @@ import styled from '@emotion/styled';
 import theme from '../../config/theme';
 
 const NavLink = styled(Link)({
-  fontFamily: 'Archivo SemiBold, sans-serif',
-  textTransform: 'uppercase',
   color: theme.colors.copy,
+  fontSize: 18,
   '& + &': { marginLeft: 50 },
   '@media (max-width: 480px)': {
     '& + &': {
@@ -52,8 +51,8 @@ function Header({ isMDX }) {
             display: flex;
           `}
         >
-          <NavLink to="/about/">about</NavLink>
-          <NavLink to="/contact/">contact</NavLink>
+          <NavLink to="/about/">About</NavLink>
+          <NavLink to="/contact/">Contact</NavLink>
         </div>
       </nav>
     </header>
