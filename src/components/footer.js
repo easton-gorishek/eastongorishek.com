@@ -62,8 +62,6 @@ const Footer = () => (
           <FontAwesomeIcon icon={faTwitter} />
         </SocialLink>
       </div>
-      {/* <p>Attributes</p>
-      <p>Easton Gorishek</p> */}
     </div>
   </footer>
 );

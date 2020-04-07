@@ -3,13 +3,16 @@ import Helmet from 'react-helmet';
 import { MDXProvider } from '@mdx-js/react';
 import { Global, css } from '@emotion/core';
 import { ThemeProvider } from 'emotion-theming';
-import "typeface-roboto";
-import "typeface-poppins";
+import { config } from '@fortawesome/fontawesome-svg-core';
+import 'typeface-roboto';
+import 'typeface-poppins';
 import useSiteMetadata from '../hooks/use-sitemetadata';
 import Header from './header';
 import Footer from './footer';
 import mdxComponents from './mdx';
 import theme from '../../config/theme';
+
+config.autoAddCss = false;
 
 const globalStyles = css`
   * {
