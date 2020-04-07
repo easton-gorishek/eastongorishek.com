@@ -9,6 +9,7 @@ import Header from './header';
 import Footer from './footer';
 import mdxComponents from './mdx';
 import theme from '../../config/theme';
+import '../fonts/fonts.css';
 
 config.autoAddCss = false;
 
