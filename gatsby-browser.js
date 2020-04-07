@@ -1,3 +1,3 @@
-import '@fortawesome/fontawesome-svg-core/styles.css';
-import 'typeface-roboto';
-import 'typeface-poppins';
+require('@fortawesome/fontawesome-svg-core/styles.css');
+require('typeface-roboto');
+require('typeface-poppins');

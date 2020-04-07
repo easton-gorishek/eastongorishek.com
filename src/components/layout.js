@@ -4,8 +4,6 @@ import { MDXProvider } from '@mdx-js/react';
 import { Global, css } from '@emotion/core';
 import { ThemeProvider } from 'emotion-theming';
 import { config } from '@fortawesome/fontawesome-svg-core';
-import 'typeface-roboto';
-import 'typeface-poppins';
 import useSiteMetadata from '../hooks/use-sitemetadata';
 import Header from './header';
 import Footer from './footer';
