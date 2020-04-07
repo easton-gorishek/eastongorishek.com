@@ -8,7 +8,6 @@ import { darken } from 'polished';
 const NavLink = styled(Link)(
   theme.mq({
     color: theme.colors.electric_purple,
-    fontFamily: 'Roboto, sans-serif',
     textTransform: 'initial',
     fontSize: [18, 20, 24],
     '&:hover': {

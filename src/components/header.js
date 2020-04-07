@@ -5,6 +5,8 @@ import styled from '@emotion/styled';
 import theme from '../../config/theme';
 
 const NavLink = styled(Link)({
+  fontFamily: 'Archivo SemiBold, sans-serif',
+  textTransform: 'uppercase',
   color: theme.colors.copy,
   '& + &': { marginLeft: 50 },
   '@media (max-width: 480px)': {

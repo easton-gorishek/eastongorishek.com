@@ -32,7 +32,6 @@ const globalStyles = css`
     font-family: 'Roboto Medium', sans-serif;
     letter-spacing: 1.1px;
     color: ${theme.colors.link_color};
-    text-transform: uppercase;
   }
 
   ul {
