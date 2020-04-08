@@ -17,7 +17,6 @@ const Contact = () => {
   };
 
   const handleSubmit = e => {
-    e.preventDefault();
     const form = e.target;
     fetch('/', {
       method: 'POST',
@@ -29,6 +28,7 @@ const Contact = () => {
     })
       .then(() => alert('Success!'))
       .catch(error => alert(error));
+    e.preventDefault();
   };
 
   return (
