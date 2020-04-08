@@ -38,18 +38,18 @@ const Header = ({ isMdx }) => {
           justifyContent: 'space-between',
           alignItems: 'center',
           margin: '0 auto',
-          '& span': {
-            fontSize: '36px',
-          },
           '& a:hover': {
             color: isMdx
               ? darken(0.1, theme.colors.copy)
               : theme.colors.link_color_hover,
           },
+          '#site-logo': {
+            fontSize: 36,
+          },
         })}
       >
-        <NavLink to="/">
-          <span>EG</span>
+        <NavLink id="site-logo" to="/">
+          EG
         </NavLink>
         <div
           css={css`
