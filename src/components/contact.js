@@ -26,7 +26,9 @@ const Contact = () => {
         'form-name': form.getAttribute('name'),
         ...state,
       }),
-    }).catch(error => alert(error));
+    })
+      .then(() => alert('Success!'))
+      .catch(error => alert(error));
   };
 
   return (
