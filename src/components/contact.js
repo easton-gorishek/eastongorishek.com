@@ -26,9 +26,7 @@ const Contact = () => {
         'form-name': form.getAttribute('name'),
         ...state,
       }),
-    })
-      .then(() => navigate(form.getAttribute('action')))
-      .catch(error => alert(error));
+    }).catch(error => alert(error));
   };
 
   return (
@@ -108,14 +106,24 @@ const Contact = () => {
           <label>
             Subject
             <br />
-            <input type="text" name="subject" required onChange={handleChange} />
+            <input
+              type="text"
+              name="subject"
+              required
+              onChange={handleChange}
+            />
           </label>
         </p>
         <p>
           <label>
             Message
             <br />
-            <textarea name="message" rows="10" required onChange={handleChange} />
+            <textarea
+              name="message"
+              rows="10"
+              required
+              onChange={handleChange}
+            />
           </label>
         </p>
         <p>
