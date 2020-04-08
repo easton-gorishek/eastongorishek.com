@@ -25,9 +25,9 @@ const Icon = ({ img }) => {
 };
 
 const NavLink = styled(Link)({
-  color: '#26b99a',
+  color: '#81ccb8',
   '&:hover': {
-    color: '#26b99a',
+    color: '#81ccb8',
   },
 });
 
@@ -83,7 +83,7 @@ const xpContent = [
     location: 'Portland, OR',
     date: '2018',
     text:
-      'I made a decision to become a software engineer and enrolled in Alchemy Code Lab’s Full-Stack JavaScript program. I went from not knowing how to open a terminal to building full-fledged web applications within six months. This experience was pivotal to the path I’m on now and the doors that have opened.',
+      'I made a decision to become a software engineer and enrolled in Alchemy Code Lab’s Full-Stack JavaScript program. I went from not knowing how to open a terminal to building full-fledged web applications within six months. This experience was pivotal to the path I’m on now.',
     color: 'fffcec',
     background: theme.colors.electric_purple,
     arrowStyle: `7px solid ${theme.colors.electric_purple}`,
@@ -94,7 +94,7 @@ const xpContent = [
     location: 'Kodiak, AK',
     date: '2017',
     text:
-      'I decided to spend the summer on a fishing boat in Alaska. I think this may go down in history as the hardest damn work I’ve ever done but in the same breath was such an amazing experience. The time fully emerged with nature and wildlife will never be forgotten.',
+      'I decided to spend the summer on a fishing boat in Alaska. I think this may go down in history as the hardest damn work I’ve ever done but in the same breath it was such an amazing experience. The time fully emerged with nature and wildlife will never be forgotten.',
     color: 'fffcec',
     background: theme.colors.electric_purple,
     arrowStyle: `7px solid ${theme.colors.electric_purple}`,

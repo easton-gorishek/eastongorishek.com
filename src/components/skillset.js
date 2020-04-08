@@ -133,10 +133,10 @@ const Skillset = () => {
             header="Core"
             skills={[
               'JavaScript',
-              'Ruby',
-              'Node.js',
               'HTML5',
               'CSS3',
+              'Node.js',
+              'Ruby',
               'MongoDB',
               'PostgreSQL'
             ]}

@@ -1,6 +1,5 @@
 import React from 'react';
-// import { css } from '@emotion/core';
-// import { navigate } from 'gatsby-link';
+import { navigate } from 'gatsby-link';
 import theme from '../../config/theme';
 
 function encode(data) {
@@ -26,7 +25,7 @@ const Contact = () => {
         ...state,
       }),
     })
-      .then(() => alert('Success!'))
+      .then(() => navigate(form.getAttribute('action')))
       .catch(error => alert(error));
     e.preventDefault();
   };
@@ -80,6 +79,7 @@ const Contact = () => {
         method="post"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
+        action="/contact/success"
         onSubmit={handleSubmit}
       >
         {/* The `form-name` hidden field is required to support form submissions without JavaScript */}

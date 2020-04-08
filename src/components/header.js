@@ -24,7 +24,10 @@ const Header = ({ isMdx }) => {
         height: 80px;
         background: ${!isMdx
           ? theme.colors.smoke_black
-          : `linear-gradient(0.45turn, ${theme.brand.primary}, 60%, ${theme.colors.electric_purple})`};
+          : `linear-gradient(0.45turn, ${darken(
+              0.2,
+              theme.colors.electric_purple
+            )}, ${theme.colors.electric_purple})`};
       `}
     >
       <nav
