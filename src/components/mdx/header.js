@@ -3,7 +3,7 @@ import theme from '../../../config/theme';
 
 export default styled.h1(
   theme.mq({
-    fontSize: [28, 32, 36],
+    fontSize: [28, 28, 36],
     color: 'black',
     fontFamily: 'Roboto Regular',
     textTransform: 'initial',
