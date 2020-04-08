@@ -1,6 +1,6 @@
 import React from 'react';
 // import { css } from '@emotion/core';
-import { navigate } from 'gatsby-link';
+// import { navigate } from 'gatsby-link';
 import theme from '../../config/theme';
 
 function encode(data) {
