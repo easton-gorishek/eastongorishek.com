@@ -48,7 +48,13 @@ const Header = ({ isMdx }) => {
           },
         })}
       >
-        <NavLink id="site-logo" to="/">
+        <NavLink
+          id="site-logo"
+          to="/"
+          activeStyle={{
+            color: theme.colors.copy,
+          }}
+        >
           EG
         </NavLink>
         <div
