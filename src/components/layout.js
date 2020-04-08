@@ -10,6 +10,7 @@ import Footer from './footer';
 import mdxComponents from './mdx';
 import theme from '../../config/theme';
 import '../fonts/fonts.css';
+import favicon from '../../static/favicon.png';
 
 config.autoAddCss = false;
 
@@ -57,7 +58,11 @@ const globalStyles = css`
   }
 `;
 
-const Layout = ({ children, bgColor = theme.colors.bg_color_light, isMdx = false }) => {
+const Layout = ({
+  children,
+  bgColor = theme.colors.bg_color_light,
+  isMdx = false,
+}) => {
   const { title, description } = useSiteMetadata();
   return (
     <ThemeProvider theme={theme}>
@@ -65,6 +70,7 @@ const Layout = ({ children, bgColor = theme.colors.bg_color_light, isMdx = false
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
+        <link rel="icon" type="image/png" href={favicon} />
         <meta name="description" content={description} />
       </Helmet>
       <div
