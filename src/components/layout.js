@@ -23,7 +23,7 @@ const globalStyles = css`
     color: ${theme.colors.copy};
     font-family: 'Roboto Regular', sans-serif;
     letter-spacing: 1.5px;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5;
   }
 
@@ -32,6 +32,9 @@ const globalStyles = css`
     font-family: 'Roboto Medium', sans-serif;
     letter-spacing: 1.1px;
     color: ${theme.colors.link_color};
+    &:hover {
+      color: ${theme.colors.link_color_hover};
+    }
   }
 
   ul {
@@ -54,7 +57,7 @@ const globalStyles = css`
   }
 `;
 
-const Layout = ({ children, bgColor = theme.colors.white, isMDX }) => {
+const Layout = ({ children, bgColor = theme.colors.bg_color_light, isMdx = false }) => {
   const { title, description } = useSiteMetadata();
   return (
     <ThemeProvider theme={theme}>
@@ -75,7 +78,7 @@ const Layout = ({ children, bgColor = theme.colors.white, isMDX }) => {
         `}
       >
         <div css={{ flex: '1 0 auto', zIndex: 0 }}>
-          <Header isMDX={isMDX} />
+          <Header isMdx={isMdx} />
           <MDXProvider components={mdxComponents}>{children}</MDXProvider>
         </div>
         <Footer />

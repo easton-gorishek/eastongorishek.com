@@ -1,10 +1,7 @@
 import styled from '@emotion/styled';
 import theme from '../../../config/theme';
 
-export default styled.p`
+export default styled.ul`
   color: ${theme.colors.smoke_black};
-  letter-spacing: 1.5px;
-  font-size: 18px;
-  line-height: 1.5;
-  margin-bottom: 16px;
+  list-style: initial;
 `;

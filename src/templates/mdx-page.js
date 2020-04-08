@@ -5,11 +5,12 @@ import theme from '../../config/theme';
 
 const MDXPage = ({ children }) => {
   return (
-    <Layout headerBg={theme.brand.primary} isMDX={true}>
+    <Layout headerBg={theme.brand.primary} isMdx={true}>
       <div
         css={css`
-          width: 850px;
-          padding-bottom: 80px;
+          width: 725px;
+          padding-top: 72px;
+          padding-bottom: 72px;
           max-width: 90vw;
           margin: 0 auto;
         `}

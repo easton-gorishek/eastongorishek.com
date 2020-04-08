@@ -1,5 +1,4 @@
 import React from 'react';
-import { darken } from 'polished';
 import styled from '@emotion/styled';
 import heroImg from '../images/hero-image.svg';
 import Link from '../components/link';
@@ -12,16 +11,6 @@ const HeroBackground = styled.div(
     background: `linear-gradient(${theme.colors.smoke_black}, 35%, ${theme.brand.primary})`,
     '@media screen and (max-width: 1024px) and (max-height: 420px) and (orientation: landscape)': {
       minHeight: 500,
-    },
-  })
-);
-
-const NavLink = styled(Link)(
-  theme.mq({
-    color: theme.colors.electric_purple,
-    fontSize: [18, 20, 24],
-    '&:hover': {
-      color: darken(0.05, theme.colors.electric_purple),
     },
   })
 );
@@ -55,6 +44,9 @@ const Hero = () => {
             right: -100,
             top: 100,
           },
+          a: {
+            fontSize: [18, 20, 24],
+          },
           '@media screen and (max-width: 1024px) and (max-height: 420px) and (orientation: landscape)': {
             '& .hero-header': {
               fontSize: 48,
@@ -84,9 +76,9 @@ const Hero = () => {
             Portland, OR. I love to explore and bring ideas to life through code
             while sipping on a hot cup of coffee.
           </p>
-          <NavLink className="hero-link" to="/about/">
+          <Link className="hero-link" to="/about/">
             Read more &rarr;
-          </NavLink>
+          </Link>
         </div>
         <img className="hero-image" src={heroImg} height={525} />
       </div>

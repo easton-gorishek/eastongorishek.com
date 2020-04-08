@@ -29,7 +29,7 @@ const Footer = () => (
   <footer
     css={css`
       width: 100%;
-      height: 250px;
+      height: 200px;
       background: linear-gradient(
         ${theme.brand.primary},
         40%,
@@ -52,13 +52,13 @@ const Footer = () => (
       `}
     >
       <div>
-        <SocialLink>
+        <SocialLink to="https://www.linkedin.com/in/easton-gorishek/">
           <FontAwesomeIcon icon={faLinkedinIn} />
         </SocialLink>
-        <SocialLink>
+        <SocialLink to="https://github.com/easton-gorishek">
           <FontAwesomeIcon icon={faGithub} />
         </SocialLink>
-        <SocialLink>
+        <SocialLink to="https://twitter.com/eastongorishek">
           <FontAwesomeIcon icon={faTwitter} />
         </SocialLink>
       </div>

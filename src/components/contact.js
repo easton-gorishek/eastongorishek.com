@@ -19,7 +19,6 @@ const Contact = () => {
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
-    // eslint-disable-next-line no-undef
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -29,7 +28,6 @@ const Contact = () => {
       }),
     })
       .then(() => navigate(form.getAttribute('action')))
-      // eslint-disable-next-line no-undef
       .catch(error => alert(error));
   };
 
@@ -80,7 +78,6 @@ const Contact = () => {
       <form
         name="contact"
         method="post"
-        action="/thanks/"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         onSubmit={handleSubmit}
@@ -97,28 +94,28 @@ const Contact = () => {
           <label>
             Name
             <br />
-            <input type="text" name="name" onChange={handleChange} />
+            <input type="text" name="name" required onChange={handleChange} />
           </label>
         </p>
         <p>
           <label>
             Email
             <br />
-            <input type="email" name="email" onChange={handleChange} />
+            <input type="email" name="email" required onChange={handleChange} />
           </label>
         </p>
         <p>
           <label>
             Subject
             <br />
-            <input type="text" name="subject" onChange={handleChange} />
+            <input type="text" name="subject" required onChange={handleChange} />
           </label>
         </p>
         <p>
           <label>
             Message
             <br />
-            <textarea name="message" rows="10" onChange={handleChange} />
+            <textarea name="message" rows="10" required onChange={handleChange} />
           </label>
         </p>
         <p>

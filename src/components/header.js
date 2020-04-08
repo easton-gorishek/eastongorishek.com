@@ -2,32 +2,29 @@ import React from 'react';
 import Link from './link';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
+import { darken } from 'polished';
 import theme from '../../config/theme';
 
 const NavLink = styled(Link)({
   color: theme.colors.copy,
-  fontSize: 18,
   '& + &': { marginLeft: 50 },
   '@media (max-width: 480px)': {
     '& + &': {
       marginLeft: 25,
     },
   },
-  '&:hover': {
-    color: theme.colors.electric_purple,
-  },
 });
 
-function Header({ isMDX }) {
+const Header = ({ isMdx }) => {
   return (
     <header
       css={css`
         display: flex;
         width: 100%;
         height: 80px;
-        background: ${theme.colors.smoke_black};
-        ${isMDX &&
-          `background: linear-gradient(to left, ${theme.brand.primary}, ${theme.brand.primary})`}
+        background: ${!isMdx
+          ? theme.colors.smoke_black
+          : `linear-gradient(0.45turn, ${theme.brand.primary}, 60%, ${theme.colors.electric_purple})`};
       `}
     >
       <nav
@@ -41,10 +38,15 @@ function Header({ isMDX }) {
           '& span': {
             fontSize: '36px',
           },
+          '& a:hover': {
+            color: isMdx
+              ? darken(0.1, theme.colors.copy)
+              : theme.colors.link_color_hover,
+          },
         })}
       >
         <NavLink to="/">
-          <span>eg</span>
+          <span>EG</span>
         </NavLink>
         <div
           css={css`
@@ -57,6 +59,6 @@ function Header({ isMDX }) {
       </nav>
     </header>
   );
-}
+};
 
 export default Header;

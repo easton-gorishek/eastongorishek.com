@@ -26,8 +26,10 @@ const XpHeader = styled('section')(
 const XpTimeline = () => {
   return (
     <div
+      id="timeline"
       css={theme.mq({
         width: '100%',
+        paddingTop: 32,
         paddingBottom: [150, 150, 200],
         background: theme.brand.primary,
         '@media only screen and (max-width: 1024px) and (max-height: 420px) and (orientation: landscape)': {

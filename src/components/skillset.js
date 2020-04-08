@@ -131,7 +131,15 @@ const Skillset = () => {
         >
           <SkillsetBlock
             header="Core"
-            skills={['JavaScript', 'Ruby', 'Node.js', 'HTML5', 'CSS3', 'MongoDB']}
+            skills={[
+              'JavaScript',
+              'Ruby',
+              'Node.js',
+              'HTML5',
+              'CSS3',
+              'MongoDB',
+              'PostgreSQL'
+            ]}
           />
           <SkillsetBlock
             header="Libraries"
@@ -146,7 +154,7 @@ const Skillset = () => {
           />
           <SkillsetBlock
             header="Services"
-            skills={['Heroku', 'Netlify', 'Docker']}
+            skills={['Heroku', 'Netlify', 'Docker', 'AWS *']}
           />
         </div>
       </div>
