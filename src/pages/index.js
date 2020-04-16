@@ -7,13 +7,11 @@ import ThankYou from '../components/thank-you';
 
 export default () => {
   return (
-    <>
-      <Layout>
-        <Hero />
-        <XpTimeline />
-        <Skillset />
-        <ThankYou />
-      </Layout>
-    </>
+    <Layout isHome={true}>
+      <Hero />
+      <XpTimeline />
+      <Skillset />
+      <ThankYou />
+    </Layout>
   );
 };

@@ -9,6 +9,7 @@ module.exports = {
   siteMetadata: {
     title: 'Easton Gorishek',
     description: 'My personal website.',
+    url: 'https://www.eastongorishek.com',
   },
   plugins: [
     'gatsby-plugin-emotion',
@@ -20,7 +21,7 @@ module.exports = {
       resolve: 'gatsby-plugin-mdx',
       options: {
         defaultLayouts: {
-          default: require.resolve('./src/templates/mdx-page.js'),
+          default: require.resolve('./src/templates/mdx-template.js'),
         },
         extensions: ['.mdx', '.md', '.markdown'],
       },
@@ -30,6 +31,13 @@ module.exports = {
       options: {
         name: 'images',
         path: 'src/images',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src`,
+        name: 'src',
       },
     },
   ],

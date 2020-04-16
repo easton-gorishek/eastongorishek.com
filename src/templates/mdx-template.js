@@ -1,11 +1,16 @@
 import React from 'react';
 import { css } from '@emotion/core';
 import Layout from '../components/layout';
-import theme from '../../config/theme';
+import SEO from '../components/seo';
 
-const MDXPage = ({ children }) => {
+const MDXTemplate = ({ children, pageContext: { frontmatter } }) => {
   return (
-    <Layout headerBg={theme.brand.primary} isMdx={true}>
+    <Layout>
+      <SEO
+        title={frontmatter.title}
+        description={frontmatter.description}
+        pathname={frontmatter.pathname}
+      />
       <div
         css={css`
           width: 725px;
@@ -21,4 +26,4 @@ const MDXPage = ({ children }) => {
   );
 };
 
-export default MDXPage;
+export default MDXTemplate;

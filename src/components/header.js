@@ -15,14 +15,14 @@ const NavLink = styled(Link)({
   },
 });
 
-const Header = ({ isMdx }) => {
+const Header = ({ isHome }) => {
   return (
     <header
       css={css`
         display: flex;
         width: 100%;
         height: 80px;
-        background: ${!isMdx
+        background: ${isHome
           ? theme.colors.smoke_black
           : `linear-gradient(0.45turn, ${darken(
               0.2,
@@ -39,7 +39,7 @@ const Header = ({ isMdx }) => {
           alignItems: 'center',
           margin: '0 auto',
           '& a:hover': {
-            color: isMdx
+            color: !isHome
               ? darken(0.1, theme.colors.copy)
               : theme.colors.link_color_hover,
           },

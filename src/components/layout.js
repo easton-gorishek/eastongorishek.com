@@ -61,7 +61,7 @@ const globalStyles = css`
 const Layout = ({
   children,
   bgColor = theme.colors.bg_color_light,
-  isMdx = false,
+  isHome = false,
 }) => {
   const { title, description } = useSiteMetadata();
   return (
@@ -84,7 +84,7 @@ const Layout = ({
         `}
       >
         <div css={{ flex: '1 0 auto', zIndex: 0 }}>
-          <Header isMdx={isMdx} />
+          <Header isHome={isHome} />
           <MDXProvider components={mdxComponents}>{children}</MDXProvider>
         </div>
         <Footer />
