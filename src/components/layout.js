@@ -30,7 +30,6 @@ const globalStyles = css`
 
   a {
     text-decoration: none;
-    font-family: 'Roboto Medium', sans-serif;
     letter-spacing: 1.1px;
     color: ${theme.colors.link_color};
     &:hover {

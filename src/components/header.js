@@ -39,22 +39,14 @@ const Header = ({ isHome }) => {
           alignItems: 'center',
           margin: '0 auto',
           '& a:hover': {
-            color: !isHome
-              ? darken(0.1, theme.colors.copy)
-              : theme.colors.link_color_hover,
+            color: darken(0.15, theme.colors.copy),
           },
           '#site-logo': {
             fontSize: 36,
           },
         })}
       >
-        <NavLink
-          id="site-logo"
-          to="/"
-          activeStyle={{
-            color: theme.colors.copy,
-          }}
-        >
+        <NavLink id="site-logo" to="/">
           EG
         </NavLink>
         <div
