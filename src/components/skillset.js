@@ -7,21 +7,21 @@ const SkillsetBlock = ({ header, skills, children }) => {
     <div
       css={theme.mq({
         '.skillset-block-header': {
-          fontSize: [32, 32],
+          fontSize: [32, 32]
         },
         '.skillset-item': {
-          fontSize: [18, 20, 24],
+          fontSize: [18, 20, 24]
         },
         marginBottom: [24, 24, 24, 24, 0],
         '@media only screen and (max-width: 1024px) and (max-height: 420px) and (orientation: landscape)': {
           marginBottom: 0,
           '.skillset-block-header': {
-            fontSize: 28,
+            fontSize: 28
           },
           '.skillset-item': {
-            fontSize: 18,
-          },
-        },
+            fontSize: 18
+          }
+        }
       })}
     >
       <h2 className="skillset-block-header">{header}</h2>
@@ -46,8 +46,8 @@ const Skillset = () => {
         minHeight: 750,
         background: theme.brand.primary,
         '@media only screen and (max-width: 1024px) and (max-height: 420px) and (orientation: landscape)': {
-          paddingBottom: 150,
-        },
+          paddingBottom: 150
+        }
       })}
     >
       <div
@@ -56,7 +56,7 @@ const Skillset = () => {
           flexDirection: 'column',
           width: '65em',
           maxWidth: '90vw',
-          margin: '0 auto',
+          margin: '0 auto'
         })}
       >
         <div
@@ -69,7 +69,7 @@ const Skillset = () => {
               'center',
               'center',
               'center',
-              'space-around',
+              'space-around'
             ],
             marginBottom: [64, 64, 128],
             '.skillset-header': {
@@ -77,29 +77,29 @@ const Skillset = () => {
               flexDirection: 'column',
               alignItems: 'center',
               fontSize: [40, 48, 56, 60, 60, 72],
-              marginBottom: [32, 32, 32, 32, 0],
+              marginBottom: [32, 32, 32, 32, 0]
             },
             '.skillset-image': {
-              height: [250, 300],
+              height: [250, 300]
             },
             '.exploring': {
               textAlign: 'center',
-              fontSize: 16,
+              fontSize: 16
             },
             '@media only screen and (max-width: 1024px) and (max-height: 420px) and (orientation: landscape)': {
               flexDirection: 'row',
               justifyContent: 'space-around',
               '& .skillset-iamge': {
                 height: 200,
-                marginBottom: 0,
+                marginBottom: 0
               },
               '& .skillset-header': {
-                fontSize: 48,
-              },
+                fontSize: 48
+              }
             },
             '@media screen and (max-width: 1024px) and (max-height: 420px) and (orientation: landscape)': {
-              marginBottom: 64,
-            },
+              marginBottom: 64
+            }
           })}
         >
           <h1 className="skillset-header">
@@ -121,12 +121,12 @@ const Skillset = () => {
               'center',
               'center',
               'center',
-              'space-around',
+              'space-around'
             ],
             '@media only screen and (max-width: 1024px) and (max-height: 420px) and (orientation: landscape)': {
               flexDirection: 'row',
-              justifyContent: 'space-around',
-            },
+              justifyContent: 'space-around'
+            }
           })}
         >
           <SkillsetBlock
@@ -145,11 +145,12 @@ const Skillset = () => {
             header="Libraries"
             skills={[
               'React',
+              'Gatsby',
               'Express.js',
               'Ruby on Rails',
               'TensorFlow *',
               'Keras *',
-              'D3.js *',
+              'D3.js *'
             ]}
           />
           <SkillsetBlock
