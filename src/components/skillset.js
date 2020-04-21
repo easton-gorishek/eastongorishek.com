@@ -112,7 +112,7 @@ const Skillset = () => {
               className="skillset-image"
               src={knowledgeImg}
               height={300}
-              alt="Illustration of a person thinking"
+              alt="Illustration of a mind map"
             />
             <p className="exploring">* currently exploring</p>
           </div>
