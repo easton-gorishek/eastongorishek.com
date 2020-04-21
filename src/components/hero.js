@@ -10,8 +10,8 @@ const HeroBackground = styled.div(
     minHeight: [500, 600, 600, 600, 850],
     background: `linear-gradient(${theme.colors.smoke_black}, 35%, ${theme.brand.primary})`,
     '@media screen and (max-width: 1024px) and (max-height: 420px) and (orientation: landscape)': {
-      minHeight: 500,
-    },
+      minHeight: 500
+    }
   })
 );
 
@@ -27,46 +27,46 @@ const Hero = () => {
           '& .hero-container': {
             paddingTop: [100, 100, 100, 100, 175],
             position: 'relative',
-            zIndex: 1,
+            zIndex: 1
           },
           '& .hero-header': {
             fontSize: [40, 48, 56, 60, 60, 72],
-            marginBottom: 8,
+            marginBottom: 8
           },
           '& .hero-copy': {
             fontSize: [18, 20, 24],
             maxWidth: [550, 550, 550, 550, 550, 600],
-            marginBottom: 8,
+            marginBottom: 8
           },
           '& .hero-image': {
             display: ['none', 'none', 'none', 'none', 'block', 'block'],
             position: 'absolute',
             right: -100,
-            top: 100,
+            top: 100
           },
           a: {
-            fontSize: [18, 20, 24],
+            fontSize: [18, 20, 24]
           },
           '@media screen and (max-width: 1024px) and (max-height: 420px) and (orientation: landscape)': {
             '& .hero-header': {
-              fontSize: 48,
+              fontSize: 48
             },
             '& .hero-container': {
-              paddingTop: 40,
+              paddingTop: 40
             },
             '& .hero-image': {
               display: 'block',
               height: 350,
-              top: 0,
+              top: 0
             },
             '& .hero-copy': {
               width: 500,
-              fontSize: 20,
+              fontSize: 20
             },
             '& .hero-link': {
-              fontSize: 20,
-            },
-          },
+              fontSize: 20
+            }
+          }
         })}
       >
         <div className="hero-container">
@@ -80,7 +80,12 @@ const Hero = () => {
             Read more &rarr;
           </Link>
         </div>
-        <img className="hero-image" src={heroImg} height={525} />
+        <img
+          className="hero-image"
+          src={heroImg}
+          height={525}
+          alt="Illustration of trees"
+        />
       </div>
     </HeroBackground>
   );

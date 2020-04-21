@@ -108,7 +108,12 @@ const Skillset = () => {
             <span>Interests</span>
           </h1>
           <div>
-            <img className="skillset-image" src={knowledgeImg} height={300} />
+            <img
+              className="skillset-image"
+              src={knowledgeImg}
+              height={300}
+              alt="Illustration of a person thinking"
+            />
             <p className="exploring">* currently exploring</p>
           </div>
         </div>
