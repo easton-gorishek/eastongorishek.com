@@ -48,7 +48,7 @@ const KickstandText = () => {
 const xpContent = [
   {
     title: 'In search of next adventure',
-    location: 'Portland, OR',
+    location: 'Salt Lake City, UT',
     date: 'Present',
     text:
       "In need of a software engineer? I'm available and eager to make an impact!",

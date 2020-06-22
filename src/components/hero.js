@@ -73,7 +73,7 @@ const Hero = () => {
           <h1 className="hero-header">Hello!</h1>
           <p className="hero-copy">
             I&apos;m Easton Gorishek. I&apos;m a software engineer based in
-            Portland, OR. I love to explore and bring ideas to life through code
+            Salt Lake City, UT. I love to explore and bring ideas to life through code
             while sipping on a hot cup of coffee.
           </p>
           <Link className="hero-link" to="/about/">
